@@ -51,4 +51,4 @@ def send_text(message):
         bot.send_sticker(message.chat.id, 'CAACAgIAAxkBAAIbmF4snDLWelBR7EFB2UPAUUmSVeG9AAIIAAPANk8Tb2wmC94am2kYBA')
 
 
-bot.polling()
+bot.polling(none_stop=True, interval=0)
