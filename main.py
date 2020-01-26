@@ -14,7 +14,11 @@ def start_message(message):
 
 @bot.message_handler(commands=['links'])
 def links_message(message):
-    bot.send_message(message.chat.id, f'Ссылки:\nWhatsApp: {whatsapp_link}\nВконтакте: {vk_link}')
+    bot.send_message(message.chat.id, f'Ссылки:\n'
+                                      f'WhatsApp: {whatsapp_link}\n'
+                                      f'Вконтакте: {vk_link}\n'
+                                      f'Яндекс: {ya_link}\n'
+                                      f'Гугл: {google_link}')
 
 
 @bot.message_handler(commands=['commands'])
@@ -22,8 +26,9 @@ def links_message(message):
     bot.send_message(message.chat.id, f'Команды:\n'
                                       f'/links-ссылки на группы\n'
                                       f'/start-родить бота\n'
-                                      f'/commands-список команд\n'
+                                      f'/commands-список команд\n\n'
                                       f'Сообщения:\n'
+                                      f'"привет", "пока" - приветствие и прощание\n'
                                       f'"вк", "хачю века", "хочу вк" - ссылка на вк группу\n'
                                       f'"ватсап", "хачю ватсап", "хочу ватсап" - ссылка на ватсап группу\n'
                                       f'"гугл" - ссылка на Google\n'
